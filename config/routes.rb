@@ -5,6 +5,10 @@ Rails.application.routes.draw do
 
   resources :projects do
     resources :rewards
+    
   end
+
+  resources :users
+  resources :sessions
 
 end
