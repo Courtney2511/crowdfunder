@@ -1,0 +1,6 @@
+class Project < ApplicationRecord
+  belongs_to :user
+  has_many :rewards
+
+  accepts_nested_attributes_for :rewards
+end
