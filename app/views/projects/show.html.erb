@@ -2,3 +2,4 @@
 <p><strong>Funding goal:</strong> $<%= @project.goal %></p>
 <p><strong>Project Destription:</strong> <%= @project.description %></p>
 <p><strong>Project Deadline:</strong> <%= @project.deadline %></p>
+<%= link_to 'Pledge', new_project_pledge_path(@project)  %>
