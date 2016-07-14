@@ -45,7 +45,7 @@
 
 <ul>
   <% @projects.each do |project| %>
-    <div><%= link_to project.name, project_path(project) %></div>
+    <div><%= link_to project.name, project_path(project) %> | $<%= project.total_pledges %> pledged of $<%= project.goal %> | <%= project.days_remaining %> days remaining</div>
   <% end %>
 </ul>
 

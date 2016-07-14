@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160714201649) do
+ActiveRecord::Schema.define(version: 20160714213105) do
 
   create_table "pledges", force: :cascade do |t|
     t.integer  "amount"
@@ -25,10 +25,10 @@ ActiveRecord::Schema.define(version: 20160714201649) do
     t.string   "name"
     t.text     "description"
     t.integer  "goal"
-    t.datetime "deadline"
     t.integer  "user_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.date     "deadline"
     t.index ["user_id"], name: "index_projects_on_user_id"
   end
 
