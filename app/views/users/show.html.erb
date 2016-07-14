@@ -1,37 +1,23 @@
 <h1>User Profile Page</h1>
 
+<p>Hello <%=@user.name.capitalize %>!</p>
 
-<!---- Projects Owned by the User ---->
+<h3><%=@user.name.capitalize %>'s Projects:</h3>
 
-<h3>My Projects:</h3>
+<% @user.projects.each do |project| %>
+  <p> <%= project.name %> </br>
+      <%= project.description %> </br>
+      <b>Goal:</b> $<%= project.goal %> </br>
+      <b>Deadline:</b> <%= project.deadline %> </br>
+  </p>
+<% end %>
 
 <%= link_to "Start a New Project", new_project_url %>
 
-<% @user.projects.each do |list| %>
-    <%= @user.project.name %>
-    <% end %>
+<h4>My Pledges:</h4>
 
-<p>Days left on project:</p>
-<!-- current_user.project.datetime ? business logic: build a method in the model ->
-<!- that takes the deadline and subtracts the datetime now from it -->
-
-<p>Total Money Raised for the project:</p>
-<!-- current_user.project -> actaul amount raised (sum of all pledges for the project. ->
-<!- this should be a business method function in the model) -->
-
-<p>STRETCH: How many people have backed at each Reward level</p>
-
-
-<!---- Projects that the user has backed ---->
-
-<h3>Projects I've Backed:</h3>
-
-  <p>Project<p> <!-- this should be a link to the project -->
-  <%= current_user.pledges.name %>
-  <p>Amount</p>
-  <%= current_user.pledges.amount %>
-  <p>Reward</p>
-  <%= current_user.pledges.project.reward.name %>
-
-
-<h4>Total Pledges:</h4>
+<% @user.pledges.each do |pledge| %>
+    <p> <%=  link_to pledge.project.name, project_path(@project) %>
+        $<%= pledge.amount %>
+    </p>
+  <% end %>
