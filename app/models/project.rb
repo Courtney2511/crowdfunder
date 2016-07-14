@@ -14,4 +14,8 @@ class Project < ApplicationRecord
   def total_pledges
     pledges.sum(:amount)
   end
+
+  def days_remaining
+    (deadline - Date.today).to_i
+  end
 end
