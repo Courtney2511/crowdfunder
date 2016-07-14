@@ -1,8 +1,5 @@
-<H1> Project Page </H1>
 
-<H2><%= @project.name %></H2>
+<H1><%= @project.name %></H1>
 <p>Our goal is to raise $<%= @project.goal %> to fund this project</p>
-
-<!-- display project's name-->
-<!-- display the project's goal amount-->
-<!-- display the project's deadline (date/days left)-->
+<p>Project Destription: <%= @project.description %></p>
+<p>Project Deadline <%= @project.deadline %></p>
