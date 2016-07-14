@@ -4,8 +4,9 @@
 <p><strong>Funding goal:</strong> $<%= @project.goal %></p>
 
 <p><strong>Project Destription:</strong> <%= @project.description %></p>
-<p><strong>Project Deadline:</strong> <%= @project.deadline %></p>
 <p><strong>Days Remaining:</strong> <%= @project.days_remaining %></p>
+
+<p><strong>Project Deadline:</strong> <%= @project.deadline %></p>
 
 <% @project.rewards.each do |reward| %>
 
