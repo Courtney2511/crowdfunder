@@ -4,20 +4,32 @@ class ProjectsController < ApplicationController
     @projects = Project.all
   end
 
+  def show
+    @project = Project.find(params[:id])
+  end
+
   def new
     @project = Project.new
     @project.rewards.build
   end
 
+  def edit
+    @project = Project.find(params[:id])
+  end
+
   def create
     @project = Project.new(project_params)
-
     if @project.save
-      redirect_to projects_path
+      redirect_to projects_url(@project)
     else
-      puts "ERROR: #{@project.errors.full_messages}"
       render :new
     end
+  end
+
+  def destroy
+    @product = Project.find(params[:id])
+    @project.destroy
+    redirect_to projects_url
   end
 
   private
