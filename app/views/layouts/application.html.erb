@@ -9,28 +9,38 @@
   </head>
 
   <body>
-    <% if current_user %>
-    <!--specifying that we are deleting, ending the session-->
-    <!--we don't need the actual ID as the parameter ("current") of the user being logged out,
-     because we are logging out the current user-->
-      <%= link_to "Logout", session_path("current"), method: :delete %>
+    <header class="navbar">
+      <div class="navbar-class">
+        <div class="container">
 
-      <%else%>
+          <ul class="nav navbar-nav">
+            <% if current_user %>
+            <!--specifying that we are deleting, ending the session-->
+            <!--we don't need the actual ID as the parameter ("current") of the user being logged out,
+             because we are logging out the current user-->
+              <li><%= link_to "Logout", session_path("current"), method: :delete %></li>
 
-    <%= link_to "Sign up", new_user_path %> |
-    <%= link_to "Login", new_session_path %> |
-    <% end %>
+              <%else%>
 
-    <%= link_to "Home", root_path %>
+            <li><%= link_to "Sign up", new_user_path %> |</li>
+            <li><%= link_to "Login", new_session_path %> |</li>
+            <% end %>
+
+            <li><%= link_to "Home", root_path %></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+          <% if flash[:notice] %>
+          <p id="notice"><%= flash[:notice] %></p>
+          <% end %>
+
+          <% if flash[:alert] %>
+          <p id="alert"><%= flash[:alert] %></p>
+          <% end %>
 
 
-    <% if flash[:notice] %>
-    <p id="notice"><%= flash[:notice] %></p>
-    <% end %>
-
-    <% if flash[:alert] %>
-    <p id="alert"><%= flash[:alert] %></p>
-    <% end %>
 
     <%= yield %>
 

@@ -13,3 +13,57 @@
  *= require_tree .
  *= require_self
  */
+ html {
+   height: 100%;
+   box-sizing: border-box;
+ }
+
+ *,
+ *:before,
+ *:after {
+   box-sizing: inherit;
+ }
+
+body {
+   position: relative;
+   margin: 0;
+   padding-bottom: 6rem;
+   min-height: 100%;
+   font-family: "Helvetica Neue", Arial, sans-serif;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    text-decoration: none;
+    color: white;
+}
+
+li:hover {
+    background-color: #111;
+}
+
+li {
+    display: block;
+    text-align: center;
+    padding: 14px 16px;
+    float: right;
+}
+
+li a {
+  text-decoration: none;
+  color: white;
+}
+
+footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  background-color: #111;
+  text-align: center;
+}
