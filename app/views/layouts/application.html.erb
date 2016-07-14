@@ -6,34 +6,37 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
   </head>
 
-  <body>
-    <header class="navbar">
-      <div class="navbar-class">
-        <div class="container">
+  <header class="navbar">
+    <div class="navbar-class">
+      <div class="container">
 
-          <ul class="navbar-nav">
+        <ul class="navbar-nav">
 
-            <%= image_tag("crowd_funder2.png", :alt => "mini_logo") %>
+          <%= image_tag("crowd_funder2.png", :alt => "mini_logo") %>
 
-            <% if current_user %>
-            <!--specifying that we are deleting, ending the session-->
-            <!--we don't need the actual ID as the parameter ("current") of the user being logged out,
-             because we are logging out the current user-->
-              <li><%= link_to "Logout", session_path("current"), method: :delete %></li>
+          <% if current_user %>
+          <!--specifying that we are deleting, ending the session-->
+          <!--we don't need the actual ID as the parameter ("current") of the user being logged out,
+           because we are logging out the current user-->
+            <li><%= link_to "Logout", session_path("current"), method: :delete %></li>
 
-              <%else%>
+            <%else%>
 
-            <li><%= link_to "Sign up", new_user_path %></li>
-            <li><%= link_to "Login", new_session_path %></li>
-            <% end %>
+          <li><%= link_to "Sign up", new_user_path %></li>
+          <li><%= link_to "Login", new_session_path %></li>
+          <% end %>
 
-            <li><%= link_to "Home", root_path %></li>
-          </ul>
-        </div>
+          <li><%= link_to "Home", root_path %></li>
+        </ul>
       </div>
-    </header>
+    </div>
+  </header>
+
+  <body>
+
 
           <% if flash[:notice] %>
           <p id="notice"><%= flash[:notice] %></p>
