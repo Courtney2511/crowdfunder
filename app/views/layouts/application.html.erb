@@ -9,9 +9,9 @@
 
   </head>
 
-  <header class="navbar">
+  <header id="navbar">
 
-      <div class="navbar-class">
+      <nav class="navbar-class">
 
 
         <ul class="navbar-nav">
@@ -33,7 +33,7 @@
           <li><%= link_to "Home", root_path %></li>
         </ul>
       </div>
-    </div>
+    </nav>
   </header>
 
 
@@ -49,7 +49,7 @@
           <p id="alert"><%= flash[:alert] %></p>
           <% end %>
 
-  
+
 
     <%= yield %>
 

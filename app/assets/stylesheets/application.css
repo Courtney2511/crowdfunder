@@ -28,11 +28,18 @@ body {
 /* Nav Bar Stuff */
 
 
+#navbar{
+  width:100%;
+  background-color: rgba(255, 0, 0, 0.5);
+  position:fixed;
+  margin: 0 auto;
+  padding:0;
+}
 
-.navbar{
+/*.navbar{
   width:100%;
   background-color: #333;
-}
+}*/
 
 .navbar-class ul {
     list-style-type: none;
@@ -52,7 +59,6 @@ body {
   height: 80px;
   position: inherit;
   float:left;
-  /*padding-top: 25px;*/
 }
 
 
@@ -66,7 +72,7 @@ body {
     text-align: center;
     padding: 14px 16px;
     float: right;
-    border: 2px solid white;
+    /*border: 2px solid white;*/
 }
 
 .navbar-class li a {
@@ -104,9 +110,7 @@ body {
 
 /* Home Page */
 
-/*.big_logo {
-  width: 100%;
-}*/
+
 
 footer {
   position: absolute;
@@ -125,14 +129,16 @@ footer {
 
 .slider .slide-button1{
   position:absolute;
-  top:45%;
+  top:48%;
   left:10%;
   color:white;
+  font-size: 25px;
 }
 
 .slider .slide-button2{
   position:absolute;
-  top:45%;
+  top:48%;
   right:10%;
   color:white;
+  font-size: 25px;
 }
