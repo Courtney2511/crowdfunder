@@ -21,8 +21,10 @@
     <%= f.datetime_field :deadline %>
   </div>
 
+  <!-- Reward Level 1 -->
+
   <div class="field">
-    <h2>Rewards</h2>
+    <h2>Reward Level 1</h2>
 
     <%= f.fields_for :rewards do |rewards_fields| %>
       <div class="field">
@@ -48,5 +50,63 @@
 
   </div>
 
-  <%= f.submit %>
+  <!-- Reward Level 2 -->
+
+  <div class="field">
+    <h2>Reward Level 2</h2>
+
+    <%= f.fields_for :rewards do |rewards_fields| %>
+      <div class="field">
+        <%= rewards_fields.label :name %>
+        <%= rewards_fields.text_field :name %>
+      </div>
+
+      <div class="field">
+        <%= rewards_fields.label :description %>
+        <%= rewards_fields.text_field :description %>
+      </div>
+
+      <div class="field">
+        <%= rewards_fields.label :amount %>
+        <%= rewards_fields.number_field :amount %>
+      </div>
+
+      <div class="field">
+        <%= rewards_fields.label :quantity %>
+        <%= rewards_fields.number_field :quantity %>
+      </div>
+    <% end %>
+
+  </div>
+
+  <!-- Reward Level 3 -->
+
+  <div class="field">
+    <h2>Reward Level 3</h2>
+
+    <%= f.fields_for :rewards do |rewards_fields| %>
+      <div class="field">
+        <%= rewards_fields.label :name %>
+        <%= rewards_fields.text_field :name %>
+      </div>
+
+      <div class="field">
+        <%= rewards_fields.label :description %>
+        <%= rewards_fields.text_field :description %>
+      </div>
+
+      <div class="field">
+        <%= rewards_fields.label :amount %>
+        <%= rewards_fields.number_field :amount %>
+      </div>
+
+      <div class="field">
+        <%= rewards_fields.label :quantity %>
+        <%= rewards_fields.number_field :quantity %>
+      </div>
+    <% end %>
+
+  </div>
+
+    <%= f.submit 'Create Project', :class => 'actions' %>
 <% end %>

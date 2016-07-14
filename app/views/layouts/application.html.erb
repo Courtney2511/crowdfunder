@@ -6,31 +6,47 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
   </head>
 
+  <header class="navbar">
+    <div class="navbar-class">
+      <div class="container">
+
+        <ul class="navbar-nav">
+
+          <%= image_tag("crowd_funder2.png", :alt => "mini_logo") %>
+
+          <% if current_user %>
+          <!--specifying that we are deleting, ending the session-->
+          <!--we don't need the actual ID as the parameter ("current") of the user being logged out,
+           because we are logging out the current user-->
+            <li><%= link_to "Logout", session_path("current"), method: :delete %></li>
+
+            <%else%>
+
+          <li><%= link_to "Sign up", new_user_path %></li>
+          <li><%= link_to "Login", new_session_path %></li>
+          <% end %>
+
+          <li><%= link_to "Home", root_path %></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
   <body>
-    <% if current_user %>
-    <!--specifying that we are deleting, ending the session-->
-    <!--we don't need the actual ID as the parameter ("current") of the user being logged out,
-     because we are logging out the current user-->
-      <%= link_to "Logout", session_path("current"), method: :delete %>
-
-      <%else%>
-
-    <%= link_to "Sign up", new_user_path %> |
-    <%= link_to "Login", new_session_path %> |
-    <% end %>
-
-    <%= link_to "Home", root_path %>
 
 
-    <% if flash[:notice] %>
-    <p id="notice"><%= flash[:notice] %></p>
-    <% end %>
+          <% if flash[:notice] %>
+          <p id="notice"><%= flash[:notice] %></p>
+          <% end %>
 
-    <% if flash[:alert] %>
-    <p id="alert"><%= flash[:alert] %></p>
-    <% end %>
+          <% if flash[:alert] %>
+          <p id="alert"><%= flash[:alert] %></p>
+          <% end %>
+
+
 
     <%= yield %>
 

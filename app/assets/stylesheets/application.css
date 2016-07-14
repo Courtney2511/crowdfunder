@@ -1,15 +1,95 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+
+ html {
+   height: 100%;
+   box-sizing: border-box;
+ }
+
+ *,
+ *:before,
+ *:after {
+   box-sizing: inherit;
+ }
+
+body {
+   position: relative;
+   padding-bottom: 6rem;
+   min-height: 100%;
+   font-family: "Helvetica Neue", Arial, sans-serif;
+}
+
+/* Nav Bar Stuff */
+
+.navbar-class ul {
+    list-style-type: none;
+    padding: 25px;
+    margin: 0;
+    height: 120px;
+    overflow: hidden;
+    background-color: #333;
+    text-decoration: none;
+    color: white;
+}
+
+.navbar-class img {
+  height: 80px;
+  position: inherit;
+}
+
+.navbar-class li:hover {
+    background-color: #111;
+}
+
+.navbar-class li {
+    display: block;
+    text-align: center;
+    padding: 14px 16px;
+    float: right;
+}
+
+.navbar-class li a {
+  text-decoration: none;
+  color: white;
+  padding-top: 20px;
+}
+
+/* Forms */
+
+.field input {
+  width: 100%;
+  padding: 12px 50px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
+.field {
+  padding-right: 100px;
+  padding-left: 40px;
+}
+
+.actions {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    ali
+}
+
+/* Home Page */
+
+.big_logo {
+  width: 100%;
+}
+
+footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  background-color: #333;
+  text-align: center;
+}

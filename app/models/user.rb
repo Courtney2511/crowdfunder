@@ -7,9 +7,8 @@ class User < ApplicationRecord
   def total_pledges
     sum = 0
     pledges.each do |pledge|
-      sum += pledge 
+      sum += pledge
     end
   end
-
 
 end
