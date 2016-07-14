@@ -32,10 +32,10 @@ body {
    font-family: "Helvetica Neue", Arial, sans-serif;
 }
 
-ul {
+.navbar-class ul {
     list-style-type: none;
-    margin: 0;
     padding: 0;
+    margin: 0;
     overflow: hidden;
     background-color: #333;
     text-decoration: none;
@@ -46,16 +46,17 @@ li:hover {
     background-color: #111;
 }
 
-li {
+.navbar-class li {
     display: block;
     text-align: center;
     padding: 14px 16px;
     float: right;
 }
 
-li a {
+.navbar-class li a {
   text-decoration: none;
   color: white;
+  padding-top: 20px;
 }
 
 footer {
