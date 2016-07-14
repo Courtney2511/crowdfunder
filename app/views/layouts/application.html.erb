@@ -16,7 +16,11 @@
 
         <ul class="navbar-nav">
 
-          <%= image_tag("crowd_funder2.png", :alt => "mini_logo", :class => "mini_logo") %>
+
+  <%= link_to projects_url do %>
+    <%= image_tag('crowd_funder2.png') %>
+  <% end %>
+
 
           <% if current_user %>
           <!--specifying that we are deleting, ending the session-->
@@ -30,7 +34,7 @@
           <li><%= link_to "Login", new_session_path %></li>
           <% end %>
 
-          <li><%= link_to "Home", root_path %></li>
+          <!-- <li><%= link_to "Home", root_path %></li> -->
         </ul>
       </div>
     <!-- </nav> -->
