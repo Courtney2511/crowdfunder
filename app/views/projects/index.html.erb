@@ -1,8 +1,21 @@
 <%= image_tag("crowd_funder1.png", :alt => "full_logo", :class => "big_logo") %>
+<div class="slider">
+  <img class="mySlides" src="http://www.w3schools.com/w3css/img_fjords.jpg">
+  <img class="mySlides" src="http://www.w3schools.com/w3css/img_lights.jpg">
+  <img class="mySlides" src="http://www.w3schools.com/w3css/img_fjords.jpg">
+  <img class="mySlides" src="http://www.w3schools.com/w3css/img_lights.jpg">
+  <a class="w3-btn-floating" style="position:absolute;top:45%; left:0" onclick=" plusDivs(-1)">&#10094;</a>
+  <a class="w3-btn-floating" style="position:absolute;top:45%;right:0" onclick="plusDivs(+1)">&#10095;</a>
+</div>
+
 
 <h1>All Projects</h1>
 
+
+
 <%= link_to 'New Project', new_project_path %>
+
+
 
 
 <ul>
@@ -10,3 +23,25 @@
     <div><%= link_to project.name, project_path(project) %> | $<%= project.total_pledges %> pledged of $<%= project.goal %> | <%= project.days_remaining %> days remaining</div>
   <% end %>
 </ul>
+
+
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  x[slideIndex-1].style.display = "block";
+}
+</script>
