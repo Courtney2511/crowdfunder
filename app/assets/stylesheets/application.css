@@ -21,8 +21,11 @@ body {
 
 .container{ /*only applies to body*/
   width:95%;
-  /*background-color: red;*/
   margin: 0 auto;
+}
+
+.spacer{
+  height:120px;
 }
 
 /* Nav Bar Stuff */
@@ -30,7 +33,7 @@ body {
 
 #navbar{
   width:100%;
-  background-color: rgba(255, 0, 0, 0.5);
+  background-color: 1;
   position:fixed;
   margin: 0 auto;
   padding:0;
@@ -122,14 +125,53 @@ footer {
   text-align: center;
 }
 
-.slider .mySlides{
-  width: 100%;
-  height: 500px;
+
+
+
+/*image slider*/
+
+
+.mySlides-container{
+  position: relative;
 }
+
+.mySlides-container .mySlides{
+  width: 100%;
+  height:500px;
+}
+
+.mySlides-container .mySlides-description{
+  position: absolute;
+  top: 15px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: #fff;
+  visibility: visible;
+  opacity: 0;
+}
+
+.mySlides-container .mySlides-description p {
+  position: absolute;
+  color: #fff;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.mySlides-container a:hover,
+.mySlides-description {
+  visibility: visible;
+  opacity: 1;
+}
+
+
+
+
 
 .slider .slide-button1{
   position:absolute;
-  top:48%;
+  top:45%;
   left:10%;
   color:white;
   font-size: 25px;
@@ -137,8 +179,12 @@ footer {
 
 .slider .slide-button2{
   position:absolute;
-  top:48%;
+  top:45%;
   right:10%;
   color:white;
   font-size: 25px;
+}
+
+.slider a:active{
+  color:green;
 }
