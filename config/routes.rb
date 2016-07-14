@@ -5,7 +5,8 @@ Rails.application.routes.draw do
 
   resources :projects do
     resources :rewards
-    
+    resources :pledges
+
   end
 
   resources :users
