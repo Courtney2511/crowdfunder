@@ -9,7 +9,20 @@
   </head>
 
   <body>
-    <%=link_to "Home", projects_url %>
+    <% if current_user %>
+    <!--specifying that we are deleting, ending the session-->
+    <!--we don't need the actual ID as the parameter ("current") of the user being logged out,
+     because we are logging out the current user-->
+      <%= link_to "Logout", session_path("current"), method: :delete %>
+
+      <%else%>
+
+    <%= link_to "Sign up", new_user_path %> |
+    <%= link_to "Login", new_session_path %> |
+    <% end %>
+
+    <%= link_to "Home", root_path %>
+
 
     <% if flash[:notice] %>
     <p id="notice"><%= flash[:notice] %></p>
@@ -23,11 +36,7 @@
 
 
   <footer>
-    <% if current_user %>
-    Signed in as <%= link_to current_user.name, user_path(current_user.id) %>
-    <% else %>
-    <%= link_to "Log in", new_session_path %> or <%= link_to "Sign up", new_user_path %>
-    <%end%>
+
   </footer>
   </body>
 </html>
