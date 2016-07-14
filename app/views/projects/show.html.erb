@@ -2,4 +2,17 @@
 <p><strong>Funding goal:</strong> $<%= @project.goal %></p>
 <p><strong>Project Destription:</strong> <%= @project.description %></p>
 <p><strong>Project Deadline:</strong> <%= @project.deadline %></p>
-<%= link_to 'Pledge', new_project_pledge_path(@project)  %>
+
+<% @project.rewards.each do |reward| %>
+
+  <%= form_for([@project, @pledge]) do |f| %>
+  <%= f.hidden_field :reward_id, value: reward.id %>
+          <div class="field">
+            <%= f.label :amount %><br />
+            <%= f.text_area :amount %>
+          </div>
+          <div class="actions">
+            <%= f.submit %>
+          </div>
+  <% end %>
+<% end %>
