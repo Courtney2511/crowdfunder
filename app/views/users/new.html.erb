@@ -1,8 +1,5 @@
 <h1>Sign Up!</h1>
 
-<%=link_to "Home", projects_url %>
-
-<h1>SIGN UP</h1>
 <%= form_for @user do |f| %>
   <% if @user.errors.any? %>
     <div class="error_messages">
@@ -14,7 +11,7 @@
       </ul>
     </div>
   <%end%>
-  
+
 <div class="field">
   <%= f.label :name %><br/>
   <%= f.text_field :name %>
