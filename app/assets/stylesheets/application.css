@@ -20,8 +20,8 @@ body {
 }
 
 .container{ /*only applies to body*/
-  width:95%;
-  margin: 0 auto;
+  overflow: hidden; /* clears float*/
+
 }
 
 h1, h2{
@@ -286,7 +286,7 @@ footer {
   color:white;
   border-radius: 20px;
   background-color: rgba(333, 333, 333, 0.1);
-  height:500px;
+  height:550px;
   display:block;
   float:left;
   width: 60%;
@@ -308,14 +308,15 @@ footer {
   margin-bottom:50px;
 }
 .reward-canvas{
-  margin-left: 20px;
+  width: 40%;
+  /*margin-left: 20px;*/
   float: left;
-  height: 500px;
+  /*height: 500px;*/
 }
 .reward-container{
   height: 180px;
   text-align: center;
-  margin-bottom: 5px;
+  margin: 0px 50px 5px 5px;
   background-color: rgba(333, 333, 333, 0.1);
   border-radius: 20px;
   width: 300px;
