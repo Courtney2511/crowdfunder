@@ -24,28 +24,28 @@
   <a class="next" style="position:absolute; right:0" onclick="plusSlides(1)">&#10095;</a>
 
 </div>
-<br>
 
-<div style="text-align:center">
-  <span class="dot" onclick="currentSlide(1)"></span>
-  <span class="dot" onclick="currentSlide(2)"></span>
-  <span class="dot" onclick="currentSlide(3)"></span>
-</div>
 </div>
 
 
 
 
 
-<%= link_to 'New Project', new_project_path %>
+<!-- <div class='new-project-link'>
+  <%= link_to 'New Project', new_project_path %>
+</div> -->
 
 
 
 <div class="projects-container">
+  <div class='new-project-link'>
+    <%= link_to 'New Project', new_project_path %>
+  </div>
+
   <div class="projects">
     <ul>
       <% @projects.each do |project| %>
-        <div><%= link_to project.name, project_path(project) %> | $<%= project.total_pledges %> pledged of $<%= project.goal %> | <%= project.days_remaining %> days remaining</div>
+        <div class="individual-project"><%= link_to project.name, project_path(project) %>  $<%= project.total_pledges %> pledged of $<%= project.goal %> <br> <%= project.days_remaining %> days remaining</div>
       <% end %>
     </ul>
   </div>
