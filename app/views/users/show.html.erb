@@ -1,9 +1,9 @@
 <div class="show-page-container">
   <div class="spacer"></div>
 
-  <h1>User Profile Page</h1>
+  <!-- <h1>User Profile Page</h1> -->
 
-  <p class="hello-msg">Hello <%=@user.name.capitalize %>!</p>
+  <h1 class="hello-msg">Hello <%=@user.name.capitalize %>!</h1>
 
   <div class="user-info-container">
     <h3><span class="project-title"><%=@user.name.capitalize %>'s Projects:<span></h3>
@@ -32,10 +32,13 @@
   <div class="pledges-container">
     <h4>My Pledges:</h4>
 
+
     <% @user.pledges.each do |pledge| %>
+    <div class="user-projects">
         <p> <%=  link_to pledge.project.name, project_path(pledge.project.id) %>
-        | $<%= pledge.amount %> | <%= pledge.reward.name %>
+        <br> $<%= pledge.amount %> <br> <%= pledge.reward.name %>
         </p>
+      </div>
       <% end %>
   </div>
 

@@ -396,6 +396,8 @@ footer {
 
 .hello-msg{
   text-align: center;
+  color:white;
+  font: cursive;
 }
 
 .user-info-container{
@@ -408,7 +410,8 @@ footer {
   float:left;
 }
 
-.user-info-container p{
+.user-info-container p,
+.pledges-container p{
   color:white;
   font-weight: lighter;
 }
@@ -419,8 +422,8 @@ footer {
   font-size: 20px;
 }
 
-.user-info-container .user-projects{
-  /*border: 2px solid white;*/
+.user-info-container .user-projects,
+.pledges-container .user-projects{
   background-color: rgba(333, 333, 333, 0.1);
   border-radius: 10px;
   margin: 5px auto;
@@ -428,20 +431,26 @@ footer {
   padding: 5px;
 }
 
-/*.user-info-container.project-description,
-.project-goal,
-.project-deadline{
-  color:#b4eeb4;
-}*/
+
 .pledges-container{
   text-align: center;
   border-radius: 20px;
   background-color: rgba(333, 333, 333, 0.1);
-  height:250px;
+  height:400px;
   width: 40%;
   padding: 5%;
   margin: 0 5%;
   float:left;
+}
+
+.pledges-container a{
+  color: #4CAF50;
+  text-decoration: none;
+  font-size: 25px;
+}
+
+.pledges-container a:hover{
+  color: #9ed1ff
 }
 
   .new-project-link2 a{
