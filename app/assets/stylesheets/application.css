@@ -287,7 +287,6 @@ footer {
 .project-info{
   text-align: center;
   color:white;
-  /*padding-top: 20px;*/
   border-radius: 20px;
   background-color: rgba(333, 333, 333, 0.1);
   height:500px;
@@ -296,10 +295,7 @@ footer {
   width: 60%;
   padding-top: 10%;
   margin: 0 auto;
-  /*display:inline-block;*/
 }
-
-
 
 .project-info .project-line{
   color:#b4eeb4;
@@ -311,4 +307,31 @@ footer {
 
 .space{
   margin-bottom:50px;
+}
+
+/*************************/
+/*      sign up Page     */
+/*************************/
+.signup-container{
+  border-radius: 20px;
+  background-color: rgba(333, 333, 333, 0.1);
+  height:500px;
+  display:block;
+  width: 40%;
+  padding-top: 10%;
+  margin: 0 auto;
+}
+
+/*************************/
+/*        Login Page     */
+/*************************/
+
+.login-container{
+  border-radius: 20px;
+  background-color: rgba(333, 333, 333, 0.1);
+  height:400px;
+  display:block;
+  width: 40%;
+  padding-top: 10%;
+  margin: 0 auto;
 }
