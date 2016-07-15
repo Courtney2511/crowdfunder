@@ -26,6 +26,7 @@
           <!--specifying that we are deleting, ending the session-->
           <!--we don't need the actual ID as the parameter ("current") of the user being logged out,
            because we are logging out the current user-->
+           <li><%= link_to "Profile", user_path("current") %></li>
             <li><%= link_to "Logout", session_path("current"), method: :delete %></li>
 
             <%else%>
