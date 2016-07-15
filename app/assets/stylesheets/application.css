@@ -303,7 +303,12 @@ footer {
 .space{
   margin-bottom:50px;
 }
+.reward-container{
+  width: 300px;
+  float: right;
 
+
+}
 /*************************/
 /*      sign up Page     */
 /*************************/
