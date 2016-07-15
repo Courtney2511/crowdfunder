@@ -6,21 +6,23 @@
   <div class="slideshow-container">
   <div class="mySlides fade">
     <img src="http://www.plantgrowthpromoters.com/images/banner12.jpg" style="width:100%">
-    <div class="text">Caption Text</div>
+    <div class="text">PROJECT 1</div>
   </div>
 
   <div class="mySlides fade">
     <img src="http://www.orthoquestpedorthics.com/files/56ce15b7-94dc-4c71-8fe0-0624d8b0b5a5.jpg" style="width:100%">
-    <div class="text">Caption Two</div>
+    <div class="text">PROJECT 2</div>
   </div>
 
   <div class="mySlides fade">
     <img src="http://nature-to-nurture.co.uk/wp-content/uploads/2014/03/Spring-Nature-Beautiful-Lands-Banner-Nature-To-Nurture-Aromatherapy-In-Hemel-St-Albans.jpg" style="width:100%">
-    <div class="text">Caption Three</div>
+    <div class="text">PROJECT 3</div>
   </div>
 
-  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+  <a class="prev" style="position:absolute; left:0" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" style="position:absolute; right:0" onclick="plusSlides(1)">&#10095;</a>
+
 </div>
 <br>
 
@@ -39,12 +41,15 @@
 
 
 
-
-<ul>
-  <% @projects.each do |project| %>
-    <div><%= link_to project.name, project_path(project) %> | $<%= project.total_pledges %> pledged of $<%= project.goal %> | <%= project.days_remaining %> days remaining</div>
-  <% end %>
-</ul>
+<div class="projects-container">
+  <div class="projects">
+    <ul>
+      <% @projects.each do |project| %>
+        <div><%= link_to project.name, project_path(project) %> | $<%= project.total_pledges %> pledged of $<%= project.goal %> | <%= project.days_remaining %> days remaining</div>
+      <% end %>
+    </ul>
+  </div>
+</div>
 
 
 
