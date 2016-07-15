@@ -1,25 +1,40 @@
-<div class="spacer"></div>
+<div class="show-page-container">
+  <div class="spacer"></div>
 
-<h1>User Profile Page</h1>
+  <h1>User Profile Page</h1>
 
-<p>Hello <%=@user.name.capitalize %>!</p>
+  <p class="hello-msg">Hello <%=@user.name.capitalize %>!</p>
 
-<h3><%=@user.name.capitalize %>'s Projects:</h3>
+  <div class="user-info-container">
+    <h3><%=@user.name.capitalize %>'s Projects:</h3>
 
-<% @user.projects.each do |project| %>
-  <p> <%= project.name %> </br>
-      <%= project.description %> </br>
-      <b>Goal:</b> $<%= project.goal %> </br>
-      <b>Deadline:</b> <%= project.deadline %> </br>
-  </p>
-<% end %>
+    <% @user.projects.each do |project| %>
+      <p> <%= project.name %> </br>
+          <%= project.description %> </br>
+          <b>Goal:</b> $<%= project.goal %> </br>
+          <b>Deadline:</b> <%= project.deadline %> </br>
+      </p>
+    <% end %>
+      <br>
+      <br>
+    <div class='new-project-link2'>
+      <%= link_to "Start a Project", new_project_url %>
+    </div>
+  </div>
 
-<%= link_to "Start a New Project", new_project_url %>
 
-<h4>My Pledges:</h4>
 
-<% @user.pledges.each do |pledge| %>
-    <p> <%=  link_to pledge.project.name, project_path(pledge.project.id) %>
-    | $<%= pledge.amount %> | <%= pledge.reward.name %>
-    </p>
-  <% end %>
+
+  <div class="pledges-container">
+    <h4>My Pledges:</h4>
+
+    <% @user.pledges.each do |pledge| %>
+        <p> <%=  link_to pledge.project.name, project_path(pledge.project.id) %>
+        | $<%= pledge.amount %> | <%= pledge.reward.name %>
+        </p>
+      <% end %>
+  </div>
+
+
+
+</div>

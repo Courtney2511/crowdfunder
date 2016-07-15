@@ -15,11 +15,11 @@
 <div class="reward-container">
   <div class="reward-desc-board">
 
-      <span class="reward-line"><%= reward.name %></span><br>
+      <span class="reward-line" id="reward-name"><%= reward.name %></span><br>
 
 
-      <span class="reward-line"><%= reward.description %></span><br>
-      <span class="reward-line">$<%= reward.amount %></span>
+      <span class="reward-line" id="reward-description"><%= reward.description %></span><br>
+      <span class="reward-line" id="reward-amt">$<%= reward.amount %></span>
   </div>
 
   <%= form_for([@project, @pledge]) do |f| %>

@@ -324,6 +324,15 @@ footer {
 .reward-desc-board{
   padding: 10px 10px 0px 10px;
 }
+
+#reward-name{
+}
+
+#reward-description,
+#reward-amt{
+  font-weight: lighter;
+}
+
 /*************************/
 /*      sign up Page     */
 /*************************/
@@ -375,3 +384,46 @@ footer {
   padding-top: 5%;
   margin: 0 auto;
 }
+
+/*************************/
+/*       User Profile    */
+/*************************/
+.show-page-container{
+  margin-left: 10%;
+  margin-right: 10%;
+  height: auto;
+}
+
+.hello-msg{
+  text-align: center;
+}
+
+.user-info-container{
+  text-align: center;
+  border-radius: 20px;
+  background-color: rgba(333, 333, 333, 0.1);
+  height:500px;
+  /*display:block;*/
+  width: 50%;
+  padding-top: 5%;
+  /*margin: 0 auto;*/
+  float:left;
+}
+
+.pledges-container{
+  text-align: center;
+  border-radius: 20px;
+  background-color: rgba(333, 333, 333, 0.1);
+  height:250px;
+  width: 40%;
+  padding: 5%;
+  margin: 0 5%;
+  float:left;
+}
+
+  .new-project-link2 a{
+    color:white;
+    text-decoration: none;
+    background-color: #4CAF50;
+    padding:15px;
+  }
