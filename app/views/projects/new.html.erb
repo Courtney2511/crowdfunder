@@ -1,26 +1,26 @@
 <div class="spacer"></div>
 
-<h1>New Project</h1>
+<h1 class='project-page'>New Project</h1>
 
 <%= form_for(@project)  do |f| %>
 <div class="field-container1">
   <div class="field">
-    <%= f.label :name %>
+    <%= f.label :name %><br>
     <%= f.text_field :name %>
   </div>
 
   <div class="field">
-    <%= f.label :goal %>
+    <%= f.label :goal %><br>
     <%= f.number_field :goal %>
   </div>
 
   <div class="field">
-    <%= f.label :description %>
+    <%= f.label :description %><br>
     <%= f.text_field :description %>
   </div>
 
   <div class="field">
-    <%= f.label :deadline %>
+    <%= f.label :deadline %><br>
     <%= f.date_field :deadline %>
   </div>
 </div>
@@ -32,22 +32,22 @@
 
     <%= f.fields_for :rewards do |rewards_fields| %>
       <div class="field">
-        <%= rewards_fields.label :name %>
+        <%= rewards_fields.label :name %><br>
         <%= rewards_fields.text_field :name %>
       </div>
 
       <div class="field">
-        <%= rewards_fields.label :description %>
+        <%= rewards_fields.label :description %><br>
         <%= rewards_fields.text_field :description %>
       </div>
 
       <div class="field">
-        <%= rewards_fields.label :amount %>
+        <%= rewards_fields.label :amount %><br>
         <%= rewards_fields.number_field :amount %>
       </div>
 
       <div class="field">
-        <%= rewards_fields.label :quantity %>
+        <%= rewards_fields.label :quantity %><br>
         <%= rewards_fields.number_field :quantity %>
       </div>
     <% end %>
@@ -61,22 +61,22 @@
 
     <%= f.fields_for :rewards do |rewards_fields| %>
       <div class="field">
-        <%= rewards_fields.label :name %>
+        <%= rewards_fields.label :name %><br>
         <%= rewards_fields.text_field :name %>
       </div>
 
       <div class="field">
-        <%= rewards_fields.label :description %>
+        <%= rewards_fields.label :description %><br>
         <%= rewards_fields.text_field :description %>
       </div>
 
       <div class="field">
-        <%= rewards_fields.label :amount %>
+        <%= rewards_fields.label :amount %><br>
         <%= rewards_fields.number_field :amount %>
       </div>
 
       <div class="field">
-        <%= rewards_fields.label :quantity %>
+        <%= rewards_fields.label :quantity %><br>
         <%= rewards_fields.number_field :quantity %>
       </div>
     <% end %>
@@ -90,27 +90,27 @@
 
     <%= f.fields_for :rewards do |rewards_fields| %>
       <div class="field">
-        <%= rewards_fields.label :name %>
+        <%= rewards_fields.label :name %><br>
         <%= rewards_fields.text_field :name %>
       </div>
 
       <div class="field">
-        <%= rewards_fields.label :description %>
+        <%= rewards_fields.label :description %><br>
         <%= rewards_fields.text_field :description %>
       </div>
 
       <div class="field">
-        <%= rewards_fields.label :amount %>
+        <%= rewards_fields.label :amount %><br>
         <%= rewards_fields.number_field :amount %>
       </div>
 
       <div class="field">
-        <%= rewards_fields.label :quantity %>
+        <%= rewards_fields.label :quantity %><br>
         <%= rewards_fields.number_field :quantity %>
       </div>
     <% end %>
 
   </div>
 
-    <%= f.submit 'Create Project', :class => 'actions' %>
+    <div class="button"><%= f.submit 'Create Project', :class => 'actions' %></div>
 <% end %>
