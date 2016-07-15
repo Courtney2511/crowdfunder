@@ -402,14 +402,37 @@ footer {
   text-align: center;
   border-radius: 20px;
   background-color: rgba(333, 333, 333, 0.1);
-  height:500px;
-  /*display:block;*/
+  height:600px;
   width: 50%;
   padding-top: 5%;
-  /*margin: 0 auto;*/
   float:left;
 }
 
+.user-info-container p{
+  color:white;
+  font-weight: lighter;
+}
+
+.user-info-container span.project-title{
+  color:white;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.user-info-container .user-projects{
+  /*border: 2px solid white;*/
+  background-color: rgba(333, 333, 333, 0.1);
+  border-radius: 10px;
+  margin: 5px auto;
+  width: 80%;
+  padding: 5px;
+}
+
+/*.user-info-container.project-description,
+.project-goal,
+.project-deadline{
+  color:#b4eeb4;
+}*/
 .pledges-container{
   text-align: center;
   border-radius: 20px;
