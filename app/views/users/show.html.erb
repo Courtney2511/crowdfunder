@@ -20,6 +20,6 @@
 
 <% @user.pledges.each do |pledge| %>
     <p> <%=  link_to pledge.project.name, project_path(pledge.project.id) %>
-        $<%= pledge.amount %>
+    | $<%= pledge.amount %> | <%= pledge.reward.name %>
     </p>
   <% end %>

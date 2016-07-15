@@ -7,10 +7,20 @@
   <p><span class="project-line">Days Remaining:</span> <%= @project.days_remaining %></p>
 </div>
 
+<div class="reward-canvas">
+
 
 <% @project.rewards.each do |reward| %>
-<div class="reward-container">
 
+<div class="reward-container">
+  <div class="reward-desc-board">
+
+      <span class="reward-line"><%= reward.name %></span><br>
+
+
+      <span class="reward-line"><%= reward.description %></span><br>
+      <span class="reward-line">$<%= reward.amount %></span>
+  </div>
 
   <%= form_for([@project, @pledge]) do |f| %>
   <%= f.hidden_field :reward_id, value: reward.id %>
@@ -31,3 +41,4 @@
   <% end %>
 
 <% end %>
+</div>

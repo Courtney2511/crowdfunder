@@ -41,7 +41,9 @@ h1, h2{
 /*     Nav bar stuff     */
 /*************************/
 
-
+header{
+  height: 100px;
+}
 #navbar{
   width:100%;
   background-color: 1;
@@ -53,9 +55,9 @@ h1, h2{
 
 .navbar-class ul {
     list-style-type: none;
-    padding-top: 25px;
+    /*padding-top: 25px;
     padding-right: 2.5%;
-    padding-left:2.5%;
+    padding-left:2.5%;*/
     margin: 0;
     height: 120px;
     overflow: hidden;
@@ -295,7 +297,9 @@ footer {
 .project-info .project-line{
   color:#b4eeb4;
 }
-
+.reward-line{
+  color:white;
+}
 #button-project-ind{
   margin-top:15px;
 }
@@ -303,11 +307,21 @@ footer {
 .space{
   margin-bottom:50px;
 }
+.reward-canvas{
+  margin-left: 20px;
+  float: left;
+  height: 500px;
+}
 .reward-container{
+  height: 180px;
+  text-align: center;
+  margin-bottom: 5px;
+  background-color: rgba(333, 333, 333, 0.1);
+  border-radius: 20px;
   width: 300px;
-  float: right;
-
-
+}
+.reward-desc-board{
+  padding: 10px 10px 0px 10px;
 }
 /*************************/
 /*      sign up Page     */

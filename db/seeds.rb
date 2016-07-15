@@ -5,7 +5,9 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-
+Project.delete_all
+Pledge.delete_all
+Reward.delete_all
 
 Project.create(name: 'Crowdfunder', description: 'Let\'s crowdfund!', goal: 10000, user_id: 1, deadline: (Date.today + 12.months))
 
