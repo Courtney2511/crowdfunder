@@ -49,7 +49,8 @@
     <div class="projects">
       <ul>
         <% @projects.each do |project| %>
-          <div class="individual-project"><%= link_to project.name, project_path(project), :class => 'project-names' %>  $<%= project.total_pledges %> pledged of $<%= project.goal %> <br> <%= project.days_remaining %> days remaining
+          
+          <div class="individual-project"><%= link_to project.name, project_path(project), :class => 'project-names' %>  <span class="info"><%= project.description %></span> <br> $<%= project.total_pledges %> pledged of $<%= project.goal %> <br> <%= project.days_remaining %> days remaining
             <div class='button'>
               <%= link_to "show more", project_path(project), :class => 'actions' %>
             </div>

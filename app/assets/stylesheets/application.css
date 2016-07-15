@@ -92,16 +92,13 @@ h1, h2{
 }
 
 /*************************/
-/*     forms     */
+/*         forms         */
 /*************************/
 .project-page{
   text-align: center;
 }
 
-.field-container1{
-  text-align: center;
-  margin-bottom: 50px;
-}
+
 
 .field{
   text-align: center;
@@ -154,7 +151,6 @@ footer {
 
 
 .slideshow-container {
-  /*max-width: 1000px;*/
   position: relative;
   margin: 0;
 }
@@ -168,7 +164,6 @@ footer {
 
 .prev, .next {
   cursor: pointer;
-  /*position: absolute;*/
   top: 0;
   top: 50%;
   width: auto;
@@ -198,17 +193,14 @@ footer {
   bottom: 50%;
   width: 100%;
   text-align: center;
-  /*background-color: rgba(333, 333, 333, 0.3);*/
 }
 
 .text p {
   color: #f2f2f2;
   font-size: 20px;
   position: absolute;
-  /*bottom: 50%;*/
   width: 100%;
   text-align: center;
-  /*background-color: rgba(333, 333, 333, 0.3);*/
 }
 
 
@@ -232,7 +224,6 @@ footer {
 
 /*current projects (index)*/
 .projects-container{
-  /*background-color: pink;*/
   overflow:hidden;
 }
 
@@ -250,22 +241,26 @@ footer {
 
 .individual-project{
   float: left;
-  padding: 10px 50px;
+  padding: 10px 70px;
   color:#b4eeb4;
   margin-right: 15px;
   margin-left: 15px;
-  width: 26%;
-  border-radius: 20px;
+  /*width: 26%;*/
+  /*border-radius: 20px;*/
   background-color: rgba(333, 333, 333, 0.1);
   height:250px;
+  text-align: center;
 }
 
+.info{
+  color: white;
+}
 
 
 .new-project-link a{
   color:white;
   text-decoration: none;
-  background-color: green;
+  background-color: #4CAF50;
   padding:15px;
   float:left;
   margin: 50px 0px 50px 0;
@@ -333,5 +328,30 @@ footer {
   display:block;
   width: 40%;
   padding-top: 10%;
+  margin: 0 auto;
+}
+
+/*************************/
+/*       New Project     */
+/*************************/
+.field-container1{
+  text-align: center;
+  border-radius: 20px;
+  background-color: rgba(333, 333, 333, 0.1);
+  height:400px;
+  display:block;
+  width: 40%;
+  padding-top: 5%;
+  margin: 0 auto;
+}
+
+.reward{
+  text-align: center;
+  border-radius: 20px;
+  background-color: rgba(333, 333, 333, 0.1);
+  height:400px;
+  display:block;
+  width: 40%;
+  padding-top: 5%;
   margin: 0 auto;
 }
