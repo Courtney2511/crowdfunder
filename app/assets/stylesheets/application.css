@@ -264,3 +264,23 @@ footer {
 .projects-container .projects ul a:active{
   color: #85c4ff;
 }
+
+/*************************/
+/*   Show Project Page   */
+/*************************/
+.project-info{
+  text-align: center;
+  color:white;
+}
+
+.project-info .project-line{
+  color:#b4eeb4;
+}
+
+#button-project-ind{
+  margin-top:15px;
+}
+
+.space{
+  margin-bottom:50px;
+}
