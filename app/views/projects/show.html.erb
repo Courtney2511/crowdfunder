@@ -1,13 +1,12 @@
 <H1><%= @project.name %></H1>
 <div class="project-info">
-  <p><span class="project-line">Funding raised:</span> $<%= @project.total_pledges %></p>
-
+  <p><span class="project-line">Project Description:</span> <%= @project.description %></p>
   <p><span class="project-line">Funding goal:</span> $<%= @project.goal %></p>
-
-  <p><span class="project-line">Project Destription:</span> <%= @project.description %></p>
+  <p><span class="project-line">Project Deadline:</span> <%= @project.deadline %></p>
+  <p><span class="project-line">Funding raised:</span> $<%= @project.total_pledges %></p>
   <p><span class="project-line">Days Remaining:</span> <%= @project.days_remaining %></p>
 
-  <p><span class="project-line">Project Deadline:</span> <%= @project.deadline %></p>
+
 </div>
 <div class="space"></div>
 

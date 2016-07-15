@@ -6,17 +6,27 @@
   <div class="slideshow-container">
   <div class="mySlides fade">
     <img src="http://www.plantgrowthpromoters.com/images/banner12.jpg" style="width:100%">
-    <div class="text">PROJECT 1</div>
+    <div class="text">
+      <h2>ABOUT<h2>
+      <p>we are an innovative group designed to help like-minded inventors</p>
+    </div>
+
   </div>
 
   <div class="mySlides fade">
     <img src="http://www.orthoquestpedorthics.com/files/56ce15b7-94dc-4c71-8fe0-0624d8b0b5a5.jpg" style="width:100%">
-    <div class="text">PROJECT 2</div>
+    <div class="text">
+      <h2>Initiated<h2>
+      <p>founded in 2002, we've already helped more than 20 inventors</p>
+    </div>
   </div>
 
   <div class="mySlides fade">
     <img src="http://nature-to-nurture.co.uk/wp-content/uploads/2014/03/Spring-Nature-Beautiful-Lands-Banner-Nature-To-Nurture-Aromatherapy-In-Hemel-St-Albans.jpg" style="width:100%">
-    <div class="text">PROJECT 3</div>
+    <div class="text">
+      <h2>How we can help you<h2>
+      <p>you need money, we find people who can give you money!</p>
+    </div>
   </div>
 
 
@@ -31,24 +41,24 @@
 
 
 
-<!-- <div class='new-project-link'>
+<div class='new-project-link'>
   <%= link_to 'New Project', new_project_path %>
-</div> -->
-
-
+</div>
 
 <div class="projects-container">
-  <div class='new-project-link'>
-    <%= link_to 'New Project', new_project_path %>
-  </div>
+    <div class="projects">
+      <ul>
+        <% @projects.each do |project| %>
+          <div class="individual-project"><%= link_to project.name, project_path(project), :class => 'project-names' %>  $<%= project.total_pledges %> pledged of $<%= project.goal %> <br> <%= project.days_remaining %> days remaining
+            <div class='button'>
+              <%= link_to "show more", project_path(project), :class => 'actions' %>
+            </div>
+          </div>
 
-  <div class="projects">
-    <ul>
-      <% @projects.each do |project| %>
-        <div class="individual-project"><%= link_to project.name, project_path(project) %>  $<%= project.total_pledges %> pledged of $<%= project.goal %> <br> <%= project.days_remaining %> days remaining</div>
-      <% end %>
-    </ul>
-  </div>
+        <% end %>
+      </ul>
+    </div>
+
 </div>
 
 
