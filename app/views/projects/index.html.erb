@@ -3,38 +3,35 @@
 
 <div class="slider">
 
-
-  <div class="mySlides-container">
-    <img class="mySlides" src="http://www.w3schools.com/w3css/img_fjords.jpg">
-    <div class="mySlides-description"><p>Project 1</p></div>
+  <div class="slideshow-container">
+  <div class="mySlides fade">
+    <img src="http://www.plantgrowthpromoters.com/images/banner12.jpg" style="width:100%">
+    <div class="text">Caption Text</div>
   </div>
 
-  <div class="mySlides-container">
-    <img class="mySlides" src="http://www.w3schools.com/w3css/img_lights.jpg">
-    <div class="mySlides-description"><p>Project 1</p></div>
+  <div class="mySlides fade">
+    <img src="http://www.orthoquestpedorthics.com/files/56ce15b7-94dc-4c71-8fe0-0624d8b0b5a5.jpg" style="width:100%">
+    <div class="text">Caption Two</div>
   </div>
 
-  <div class="mySlides-container">
-    <img class="mySlides" src="http://www.w3schools.com/w3css/img_fjords.jpg">
-    <div class="mySlides-description"><p>Project 1</p></div>
+  <div class="mySlides fade">
+    <img src="http://nature-to-nurture.co.uk/wp-content/uploads/2014/03/Spring-Nature-Beautiful-Lands-Banner-Nature-To-Nurture-Aromatherapy-In-Hemel-St-Albans.jpg" style="width:100%">
+    <div class="text">Caption Three</div>
   </div>
 
-  <div class="mySlides-container">
-    <img class="mySlides" src="http://www.w3schools.com/w3css/img_lights.jpg">
-    <div class="mySlides-description"><p>Project 1</p></div>
-  </div>
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
 
-  <a class="slide-button1"  onclick="plusDivs(-1)">&#10094;</a>
-  <a class="slide-button2"  onclick="plusDivs(+1)">&#10095;</a>
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+</div>
 </div>
 
-<!-- <div class="img-wrap">
-          <img class="image" src="images/placeholder_img.jpg" alt="">
-          <div class="img-description"><p>SeatYourself</p></div>
-      </div> -->
 
-
-<!-- <h1>All Projects</h1> -->
 
 
 
@@ -52,21 +49,32 @@
 
 
 <script>
-var slideIndex = 1;
-showDivs(slideIndex);
+  var slideIndex = 1;
+  showSlides(slideIndex);
 
-function plusDivs(n) {
-  showDivs(slideIndex += n);
-}
-
-function showDivs(n) {
-  var i;
-  var x = document.getElementsByClassName("mySlides");
-  if (n > x.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = x.length}
-  for (i = 0; i < x.length; i++) {
-     x[i].style.display = "none";
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
   }
-  x[slideIndex-1].style.display = "block";
-}
+
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+
+  function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " active";
+  }
+
+
 </script>
